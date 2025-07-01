@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      :root {
+        --main-color: #1368ff;
+        --secondary-color: #4cba35;
+        --create: rgb(104, 187, 255);
+        --form-color: #fff;
+        --background-color: #f2f4f7;
+        --text-color-dark: #000;
+        --shadow-color-light: #a4a4a4;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+      }
+      #first,
+      #second {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .column {
+          flex-direction: column;
+        }
+        #first,
+        #second {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      #first {
+        background: var(--background-color);
+        padding-right: 40px;
+        padding-left: 40px;
+      }
+      .facebook {
+        color: var(--main-color);
+        font-size: 45px;
+      }
+
+      .facebook-p {
+        font-size: 25px;
+        color: var(--text-color-dark);
+      }
+
+      #second {
+        background: var(--background-color);
+      }
+      .form {
+        background-color: var(--form-color);
+        box-shadow: 0 2px 8px var(--shadow-color-light);
+        width: 400px;
+        height: 355px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      #email,
+      #password,
+      #login,
+      #fp,
+      #ca {
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 348px;
+        height: 38px;
+        border-color: var(--form-color);
+      }
+
+      #fp {
+        font-size: 13px;
+        color: var(--main-color);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #login {
+        background-color: var(--main-color);
+        color: var(--form-color);
+      }
+
+      #ca {
+        background-color: #4cba35;
+        width: 250px;
+        height: 40px;
+        color: var(--form-color);
+      }
+
+      .last-step{
+        font-size: smaller;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+
+    <title>Facebook - Log in</title>
+  </head>
+  <body>
+    <div class="column">
+      <div id="first">
+        <div>
+          <h1 class="facebook">facebook</h1>
+          <p class="facebook-p">
+            Facebook helps you connect <br />
+            and share with the people in your life.
+          </p>
+        </div>
+      </div>
+
+      <div id="second">
+        <div>
+          <form action="" class="form">
+            <input id="email" type="text" placeholder="Email or Phone Number" />
+            <br />
+            <input id="password" type="text" placeholder="Password" />
+            <br />
+            <button id="login" type="submit">Log In</button>
+
+            <p id="fp">Forgotten password?</p>
+
+            <button id="ca">Create Account</button>
+          </form>
+          <p class="last-step"> <strong>Create a Page </strong> _ for a celebrity, brand or business.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
