@@ -20,6 +20,7 @@
         padding: 0;
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
+        background-color: var(--background-color);
       }
 
       .column {
@@ -37,7 +38,7 @@
         justify-content: center;
       }
 
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 700px) {
         .column {
           flex-direction: column;
         }
@@ -78,9 +79,8 @@
         justify-content: center;
       }
 
-      input:focus {
-        outline: none;
-      }
+      
+      
 
       #email,
       #password,
@@ -102,6 +102,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        background-color: var(--form-color);
       }
 
       #login {

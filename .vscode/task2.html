@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style>
+          :root {
+            --main-color: #d34088;
+            --secondary-color: #4cba35;
+            --create: #f25e63;
+            --form-color: #000000;
+            --background-color: #000000;
+            --text-color-dark: #fe9c40;
+            --shadow-color-light: #ffffff;
+            --login: #1368ff;
+          }
+
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background-color);
+          }
+
+          .column {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            height: 100vh;
+          }
+          #first,
+          #second {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+
+          @media only screen and (max-width: 900px) {
+            .column {
+              flex-direction: column;
+            }
+            #first,
+            #second {
+              width: 100%;
+              height: 100%;
+            }
+            #first {
+              display: none;
+            }
+          }
+
+          #first {
+            padding-right: 40px;
+            padding-left: 40px;
+          }
+
+          #second {
+            margin-right: 20px;
+          }
+          .form {
+            background-color: var(--form-color);
+
+            width: 400px;
+            height: 355px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 40px;
+            margin-right: 40px;
+          }
+
+
+          #email,
+          #password,
+          #login,
+          #fp {
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 348px;
+            height: 38px;
+            border-color: var(--form-color);
+            color: var(--shadow-color-light);
+            background-color: var(--background-color);
+          }
+
+          #fp {
+            font-size: 13px;
+            color: var(--shadow-color-light);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+
+          #login {
+            background-color: var(--login);
+            color: var(--form-color);
+          }
+
+          .pic {
+            height: 400px;
+            width: 550px;
+            border-radius: 17px;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+          }
+
+          #instagram {
+            color: var(--shadow-color-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .facebook-signin {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+          }
+
+          #facebooklogo {
+            width: 20px;
+            height: 18px;
+          }
+          #facebooklogop {
+            color: var(--login);
+          }
+
+          #last-step {
+            color: var(--shadow-color-light);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+
+          #link {
+            color: var(--login);
+            text-decoration: none;
+          }
+        </style>
+
+        <title>instagram - Log in</title>
+      </head>
+      <body>
+        <div class="column">
+          <div id="first">
+            <div>
+              <img class="pic" src="Untitled design (1).svg" alt="" />
+            </div>
+          </div>
+
+          <div id="second">
+            <div>
+              <h2 id="instagram">instagram</h2>
+              <form action="" class="form">
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="Phone Number, User Name, or Email"
+                />
+                <br />
+                <input id="password" type="password" placeholder="Password" />
+                <br />
+                <button id="login" type="submit">Log In</button>
+              
+                <div class="facebook-signin">
+                  <img id="facebooklogo" src="facebook logo.png" alt="" />
+                  <p id="facebooklogop">__Sign in with Facebook</p>
+                </div>
+                <p id="fp">Forgotten password?</p>
+              </form>
+              <p id="last-step">
+                Dont have an account?
+                <a
+                  id="link"
+                  href="https://www.instagram.com/accounts/login/?hl=en"
+                  >Sign up</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+  </body>
+</html>
